@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+  <!-- FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poller+One&display=swap" rel="stylesheet">
+
+ <!-- Font Awesome CDN -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <style>
+        /* NAVBAR */
+        .navbar {
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.8); Adjust the opacity as needed
+  }
+
+  .navbar-toggler-icon {
+  filter: brightness(0) invert(1);
+}
+    .dropdown-menu .dropdown-item {
+      font-size: 1em;
+    }
+
+    @media (max-width: 470px) {
+      .dropdown-menu .dropdown-item {
+      font-size: 0.8rem;
+    }
+    }
+
+    @media (max-width: 415px) {
+      .dropdown-menu .dropdown-item {
+      font-size: 0.8rem;
+    }
+    }
+
+    
+    @media (max-width: 400px) {
+      .dropdown-menu .dropdown-item {
+      font-size: 0.7rem;
+    }
+    }
+
+    @media (max-width: 370px) {
+      .dropdown-menu .dropdown-item {
+      font-size: 0.6rem;
+    }
+    }
+
+    .carousel-item {
+      text-align: center;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      /* height: 100vh; */
+      line-height: 70px;
+
+    }
+
+
+
+
+    #hero-head {
+        position: relative;
+        top: 150px;
+        color: #FFF;
+        font-size: 4em;
+        font-weight: 600;
+    }
+
+    .para-btn {
+        position: relative;
+        top: 200px;
+    }
+
+    @media (max-width: 768px) {
+    #hero-head {
+        position: relative;
+        top: 150px;
+        color: #FFF;
+        font-size: 3em;
+        font-weight: 600;
+        line-height: 60px;
+    }
+
+    .para-btn {
+        position: relative;
+        top: 100px;
+    }
+    }
+
+    @media (max-width: 768px) {
+        #hero-head {
+        position: relative;
+        top: 150px;
+        color: #FFF;
+        font-size: 2em;
+        font-weight: 600;
+        line-height: 50px;
+    }
+
+    .para-btn {
+        position: relative;
+        top: 100px;
+    }
+    }
+
+    @media (max-width: 405px) {
+        #hero-head {
+        position: relative;
+        top: 150px;
+        color: #FFF;
+        font-size: 1.8em;
+        font-weight: 600;
+        line-height: 40px;
+    }
+
+    .para-btn {
+        position: relative;
+        top: 100px;
+    }
+    }
+
+    @media (max-width: 350px) {
+        #hero-head {
+        position: relative;
+        top: 150px;
+        color: #FFF;
+        font-size: 1.5em;
+        font-weight: 600;
+        line-height: 40px;
+    }
+
+    .para-btn {
+        position: relative;
+        top: 100px;
+    }
+    }
+
+    .carousel-item p {
+      font-size: 24px;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+
+    .btn-read-how {
+        font-size: 1.3em;
+        position: relative;
+        top: 100px;
+        border-radius: 42px;
+        border: 1px solid #FFF;
+        color: #FFF;
+        background: #717785;
+        padding: 9px 30px 9px 30px;
+        box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.08);
+    }
+
+    .carousel-item-1 {
+      background-image: url('Images/2nd.jpg');
+      height: 80vh;
+    }
+
+    .carousel-item-2 {
+      background-image: url('Images/22nd.jpg');
+      height: 80vh;
+    }
+
+    .carousel-item-3 {
+      background-image: url('Images/Growth.jpg');
+      height: 80vh;
+    }
+
+
+
+    /* ******************************************** */
+
+    .lul {
+
+        position: relative;
+        right: 50px;
+        top: 70px;
+    }
+
+    .sec-heading {
+        font-size: 1.4em;
+        font-weight: 600;
+    }
+
+    .sec-sub-heading {
+        margin-top: 30px;
+        margin-bottom: 25px;
+        font-size: 3em;
+        line-height: 50px;
+        white-space: nowrap;
+    }
+
+    @media (max-width: 768px) {
+        .lul {
+        position: relative;
+        right: 0px;
+    }
+    .sec-heading {
+        font-size: 1.5em;
+        font-weight: 600;
+
+    }
+
+    .sec-sub-heading {
+        font-size: 2em;
+        line-height: 50px;
+        white-space: nowrap;
+    }
+    }
+
+    @media (max-width: 550px) {
+    
+    .sec-heading {
+        font-size: 1.8em;
+        font-weight: 600;
+
+    }
+
+    .sec-sub-heading {
+        font-size: 1.5em;
+        line-height: 50px;
+        white-space: nowrap;
+    }
+    }
+
+    @media (max-width: 415px) {
+    
+    .sec-heading {
+        font-size: 1.8em;
+        font-weight: 600;
+
+    }
+
+    .sec-sub-heading {
+        font-size: 1.3em;
+        line-height: 50px;
+        white-space: nowrap;
+    }
+    }
+
+    @media (max-width: 350px) {
+    
+    .sec-heading {
+        font-size: 1.6em;
+        font-weight: 600;
+
+    }
+
+    .sec-sub-heading {
+        font-size: 1.2em;
+        line-height: 20px;
+        white-space: nowrap;
+    }
+    }
+
+    .card-body {
+  flex: 1 1 auto;
+  min-height: 1px;
+}
+
+    .card {
+        position: relative;
+        top: 100px;
+      border-radius: 14px;
+      border: #d8d2d2 1px solid;
+      background: #F8F9FA;
+    }
+
+    .card:hover {
+        box-shadow: 3px 3px 0px 3px;
+        transition: box-shadow 0.4s ease;
+    }
+    .card:hover .card-number {
+  color: black;
+  transition: 0.7s;
+}
+
+
+    .card-2:hover {
+    box-shadow: 3px 3px 0px 3px !important;
+  }
+
+    .card-number {
+      position: absolute;
+      top: -145px;
+      left: -10px;
+      color: rgba(112, 118, 132, 0.30);
+      font-size: 7em;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 100;
+      letter-spacing: -5px;
+    }
+
+
+
+
+    /* CARD SPACING */
+
+    .card-1 {
+        top: 200px;
+        right: 50px;
+        z-index: 99;
+    }
+
+    .card-2 {
+        position: relative;
+        left: 50px;
+        top: 400px;
+        z-index: 99;
+    }
+
+    .card-3 {
+        position: relative;
+        top: 400px;
+        right: 50px;
+    }
+
+    .card-4 {
+        position: relative;
+        left: 50px;
+        top: 600px;
+    }
+
+    @media (max-width: 768px) {
+    .card-1 {
+        right: 0px;
+    }
+
+    .card-2 {
+        position: relative;
+        left: 0px;
+        top: 350px;
+    }
+
+    .card-3 {
+        position: relative;
+        top: 450px;
+        right: 0px;
+    }
+
+    .card-4 {
+        position: relative;
+        left: 0px;
+        top: 600px;
+    }
+    }
+
+
+    .card-title {
+        color: #182F4A;
+        font-size: 32px;
+        font-weight: 600;
+        letter-spacing: 1px;
+    }
+
+    .title-2 {
+        padding-right: 70px;
+    }
+
+    .bot-foot {
+      background: #343A3F;
+    }
+
+    .bf-name {
+      color: #fff;
+      font-family: 'Poller One', cursive;
+    }
+
+    .footer-link{
+      color: #fff;
+    }
+
+    .footer-link:hover {
+      color: #fff;
+    }
+
+    .foot-icon{
+      color: #fff;
+    }
+    .rightsCopy{
+      color: #fff;
+    }
+
+    /* Styling for screens larger than 500px */
+@media (min-width: 577px) {
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #27242a #ffffff00;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #ffffff;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #27242a;
+    border-radius: 0px;
+    border: 0px solid #ffffff;
+  }
+}
+  </style>
+  <title>Bootstrap Cards</title>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <a class="navbar-brand pl-5 p-2" href="#">Hyprbots</a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse p-2" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle mr-5" href="products.html" id="productsDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">Products</a>
+          <div class="dropdown-menu" aria-labelledby="productsDropdown">
+            <a class="dropdown-item" href="products.html#sec1">Account Payable Hyper Assistant</a>
+            <a class="dropdown-item" href="products.html#sec2">Account Receivable Hyper Assistant</a>
+            <a class="dropdown-item" href="products.html#sec3">Claims Processing Hyper Assistant</a>
+            <a class="dropdown-item" href="products.html#sec4">Recruitment Processing Hyper Assistant</a>
+            <a class="dropdown-item" href="products.html#sec5">Contract and Legal Hyper Assistant</a>
+            <a class="dropdown-item" href="products.html#sec6">General Purpose Office Hyper Assistant</a>
+            <a class="dropdown-item" href="products.html#sec7">Cloud Capacity Monitoring and Control Hyper Assistant</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link mr-5" href="#">Platform</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link mr-5" href="Research.html">Research</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle mr-5" href="#" id="companyDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">Company</a>
+          <div class="dropdown-menu" aria-labelledby="companyDropdown">
+            <a class="dropdown-item" href="About.html">About Us</a>
+            <a class="dropdown-item" href="About.html">Mission</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+    <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="2000">
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item carousel-item-1 active">
+            <p id="hero-head" class="para-btn">Hyper Assistants for <br> Autonomous Enterprise</p><br>
+            <a class="para-btn btn btn-read-how" href="#">Read How</a>
+          </div>
+          <div class="carousel-item carousel-item-2">
+            <p id="hero-head" class="para-btn">Collaborate with Humans <br> For Enterprise Control</p><br>
+            <a class="para-btn btn btn-read-how" href="#">Read How</a>
+          </div>
+          <div class="carousel-item carousel-item-3">
+            <p id="hero-head" class="para-btn">Guarantee for Measurable <br> Benefits</p><br>
+            <a class="para-btn btn btn-read-how" href="#">Read How</a>
+          </div>
+        </div>
+      </div>
+
+
+  <div class="container">
+    <div class="lul">
+        <div class="sec-sub-heading">
+            <h1 class="sec-heading">Challenges</h1>
+            with Existing Automation Solutions
+        </div>
+
+    </div>
+    <div class="row">
+      <div class="col-md-6 mt-4">
+        <div class="card card-1 position-relative mt-xl-5">
+          <span class="card-number">01</span>
+          <div class="card-body">
+            <h3 class="card-title font-weight-bold">Partial Automation</h3>
+            <p class="card-text lead font-weight-normal pt-3">No one is giving me “ready to deploy” solution that automates my process end to end. Like in account payable, no one offers solution to automate my tasks involved in all three areas i.e. front office systems(supplier), document processing and back office systems(finance)</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 mt-4">
+        <div class="card card-2 position-relative mt-xl-5">
+          <span class="card-number">02</span>
+          <div class="card-body">
+            <h3 class="card-title title-2 font-weight-bold">Very High System Integration Effort</h3>
+            <p class="card-text lead font-weight-normal pt-3">The current vendors give a platform that requires system integration effort ranging from 3 months to 12 months with several technical resources. The budget for such large effort is a big constraint.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 mt-4">
+        <div class="card card-3 mt-5">
+          <span class="card-number">03</span>
+          <div class="card-body">
+            <h3 class="card-title font-weight-bold">Higher Operating Costs</h3>
+            <p class="card-text lead font-weight-normal pt-3">The current vendors’ technology is computing heavy resulting into higher licensing and infrastructure costs. Moderate automation accuracy results into low productivity in the business process. Overall ROI is moderate to low.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 mt-4">
+        <div class="card card-4 mt-xl-5">
+          <span class="card-number">04</span>
+          <div class="card-body">
+            <h3 class="card-title font-weight-bold">Difficulty in Change Management</h3>
+            <p class="card-text lead font-weight-normal pt-3">The current solutions offer workflow tools that bind tasks in rigid sequence with fixed inputs and outputs. Business requires changes in them from time to time. These changes need technical resources with platform knowledge. This is expensive, and leads to no-change situation on ground.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <footer class="bot-foot container-fluid text-center mt-5">
+    <br><br>
+    <div class="row">
+      <div class="col">
+        <h1 class="bf-name">HYPRBOTS</h1>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col foot-headers">
+        <a href="#" class="mr-5 footer-link">Products</a>
+        <a href="#"class="mr-5 footer-link"">Platform</a>
+        <a href="#"class="mr-5 footer-link"">Research</a>
+        <a href="#" class="footer-link">Company</a>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col">
+        <a href="#" class="mr-4 foot-icon"><i class="fab fa-facebook"></i></a>
+        <a href="#" class="mr-4 foot-icon"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="mr-4 foot-icon"><i class="fab fa-instagram"></i></a>
+      </div>
+      <br><br>
+    </div>
+    <div class="row">
+      <div class="col">
+        <p class="rightsCopy">&copy; 2023 All rights reserved | This template is made with ❤️ by Knownfreaks</p>
+      </div>
+    </div>
+    <br>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <script>
+    // NAVBAR
+    window.addEventListener('DOMContentLoaded', () => {
+      const navbarBrand = document.querySelector('.navbar-brand');
+      const mq = window.matchMedia('(max-width: 992px)');
+  
+      function handleScreenResize(event) {
+        if (event.matches) {
+          navbarBrand.classList.remove('pl-5');
+        } else {
+          navbarBrand.classList.add('pl-5');
+        }
+      }
+  
+      mq.addEventListener('change', handleScreenResize);
+      handleScreenResize(mq);
+    });
+
+        // Get the footer links
+        const footerLinks = document.querySelectorAll('.footer-link');
+
+// Function to add or remove class based on screen width
+function toggleMarginClass() {
+  if (window.innerWidth < 477) {
+    footerLinks.forEach(link => {
+      link.classList.remove('mr-5');
+      link.classList.add('mr-3');
+    });
+  } else {
+    footerLinks.forEach(link => {
+      link.classList.remove('mr-3');
+      link.classList.add('mr-5');
+    });
+  }
+}
+
+// Call the function on page load and whenever the window is resized
+window.addEventListener('load', toggleMarginClass);
+window.addEventListener('resize', toggleMarginClass);
+  </script>
+</body>
+</html>

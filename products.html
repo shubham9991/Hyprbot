@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Products Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <!-- FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poller+One&display=swap" rel="stylesheet">
+
+ <!-- Font Awesome CDN -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    .navbar .nav-link,
+    .navbar .navbar-brand {
+      color: white !important;
+    }
+    .navbar-toggler-icon {
+  filter: brightness(0) invert(1);
+stroke: #fff;
+}
+
+
+    .navbar {
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    background-color: rgba(0, 0, 0, 0.878); Adjust the opacity as needed
+  }
+    .dropdown-menu .dropdown-item {
+      font-size: 1em;
+    }
+
+    .extra-Space {
+      margin-top: 100px !important;
+    }
+
+    @media (max-width: 470px) {
+      .dropdown-menu .dropdown-item {
+      font-size: 0.8rem;
+    }
+    }
+
+    @media (max-width: 415px) {
+      .dropdown-menu .dropdown-item {
+      font-size: 0.8rem;
+    }
+    }
+
+    
+    @media (max-width: 400px) {
+      .dropdown-menu .dropdown-item {
+      font-size: 0.7rem;
+    }
+    }
+
+    @media (max-width: 370px) {
+      .dropdown-menu .dropdown-item {
+      font-size: 0.6rem;
+    }
+    }
+    /* Set full width and height for each section */
+    .section {
+      width: 100%;
+      height: 700px;
+      display: flex;
+
+    }
+
+    .blue-color {
+        background: #003B81;
+    }
+
+    .roboo {
+        position: absolute;
+      /* top: -145px;
+      left: -10px; */
+      right: 0px;
+      top: 47px;
+      z-index: 50;
+    }
+
+    .robo {
+        position: relative;
+      /* top: -145px;
+      left: -10px; */
+      right: 0px;
+      top: 62px;
+    }
+
+
+
+    .robo3 {
+      position: relative;
+      /* top: -145px;
+      left: -10px; */
+      right: 0px;
+      top: 43px;
+    }
+
+    .robo4 {
+      position: relative;
+      /* top: -145px;
+      left: -10px; */
+      right: 0px;
+      top: 123px;
+    }
+
+    .robo5 {
+      position: relative;
+      /* top: -145px;
+      left: -10px; */
+      right: 0px;
+      top: 172px;
+    }
+
+    .robo6 {
+      position: relative;
+      /* top: -145px;
+      left: -10px; */
+      right: 0px;
+      top: 71px;
+    }
+
+    .robo7 {
+      position: relative;
+      /* top: -145px;
+      left: -10px; */
+      right: 0px;
+      top: -4px !important;
+    }
+
+    .content-outimg {
+        margin-top: 150px;
+    }
+
+    .btn {
+        border-radius: 8px;
+        background: #003B81;
+        padding: 15px 41px;
+        color: #ffffff;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 1.25rem;
+        line-height: 149.8%;
+    }
+
+    .btn:hover {
+        color: #ffffff;
+        background: #000000;
+    }
+
+    .btn-svg {
+        position: relative;
+        top: 1px;
+    }
+
+    /*  */
+    .btn-1 {
+        border-radius: 8px;
+        background: #000000;
+        padding: 15px 41px;
+        color: #ffffff;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 1.25rem;
+        line-height: 149.8%;
+        border-style: none;
+    }
+
+    .btn-1:hover {
+        color: #ffffff;
+        background: #242121;
+    }
+
+    .btn-svg-1 {
+        position: relative;
+        top: 1px;
+    }
+
+
+.br-head {
+    font-family: 'Poppins', sans-serif;
+    color: #003B81;
+    font-size: 4rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+}
+
+.bb-head {
+    font-size: 4rem;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+}
+
+.bot-foot {
+      background: #343A3F;
+    }
+
+    .bf-name {
+      color: #fff;
+      font-family: 'Poller One', cursive;
+    }
+
+    .footer-link{
+      color: #fff;
+    }
+
+    .footer-link:hover {
+      color: #fff;
+    }
+
+    .foot-icon{
+      color: #fff;
+    }
+    .rightsCopy{
+      color: #fff;
+    }
+
+    @media (max-width: 1282px) and (min-width: 1198px) {
+        .br-head {
+    font-size: 3.7rem;
+}
+
+.bb-head {
+    font-size: 4rem;
+}
+    }
+
+
+    @media (max-width: 1199px) {
+        .roboo, .robo, .robo2, .robo3, .robo4, .robo5, .robo6, .robo7  {
+            display: none;
+        }
+    }
+    @media (max-width: 1199px) {
+        .unnine {
+            width: 90vw;
+        }
+        .unnines {
+            width: 80vw !important;
+        }
+
+        .unninez {
+            font-size: 3rem !important;
+            width: 80vw;
+        }
+    }
+
+    @media (max-width: 1200px) {
+      .br-head {
+        font-size: 3.5rem;
+    }
+
+      .bb-head {
+        font-size: 3.5rem;
+    }
+    } 
+
+    @media (max-width: 992px) {
+      .br-head {
+        font-size: 2.5rem;
+    }
+
+      .bb-head {
+        font-size: 2.5rem;
+    }
+    .unninez {
+      font-size: 2.5rem;
+    }
+    }
+
+    @media (max-width: 992px) {
+      .content-outimg {
+        margin-top: 80px;
+    }
+    }
+
+    @media (max-width: 768px) {
+      .unnine, .unninezz {
+        margin-left: 0px !important;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .br-head {
+        font-size: 2rem;
+    }
+
+      .bb-head {
+        font-size: 2rem;
+    }
+    .unninez {
+      font-size: 2rem;
+    }
+    }
+
+    @media (max-width: 576px) {
+      .br-head {
+        font-size: 1.5rem;
+    }
+
+      .bb-head {
+        font-size: 1.5rem;
+    }
+    .unninez {
+      font-size: 1.5rem !important;
+    }
+
+    .lead {
+      font-size: 1rem;
+    }
+    }
+
+    @media (max-width: 425px) {
+      .btn {
+        padding: 5px 15px;
+        gap: 10px;
+        font-size: 0.8rem;
+        line-height: 149.8%;
+    }
+
+    .btn-svg {
+        position: relative;
+        top: 1px;
+        width: 10px;
+        /* bottom: 2px; */
+    }
+
+    /*  */
+    .btn-1 {
+        padding: 5px 15px;
+        gap: 10px;
+        font-size: 0.8rem;
+        line-height: 149.8%;
+    }
+
+    .btn-svg-1 {
+        position: relative;
+        top: 1px;
+        width: 10px;
+    }
+
+    .br-head {
+        font-size: 1.2rem;
+        width: 60vw;
+    }
+
+      .bb-head {
+        font-size: 1.2rem;
+        width: 60vw !important;
+    }
+    .unninez {
+      font-size: 1.2rem !important;
+      width: 70vw !important;
+    }
+
+    .lead {
+      font-size: 0.8rem;
+    }
+    }
+
+    @media (max-width: 575px) and (min-width: 424px) {
+      .btn {
+        padding: 10px 25px;
+        gap: 10px;
+        font-size: 0.8rem;
+        line-height: 149.8%;
+    }
+
+    .btn-svg {
+        position: relative;
+        top: 1px;
+        width: 10px;
+        /* bottom: 2px; */
+    }
+
+    /*  */
+    .btn-1 {
+        padding: 10px 25px;
+        gap: 10px;
+        font-size: 0.8rem;
+        line-height: 149.8%;
+    }
+
+    .btn-svg-1 {
+        position: relative;
+        top: 1px;
+        width: 10px;
+    }
+    }
+        /* Styling for screens larger than 500px */
+@media (min-width: 577px) {
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #27242a #ffffff00;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #ffffff;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #27242a;
+    border-radius: 0px;
+    border: 0px solid #ffffff;
+  }
+}
+  </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <a class="navbar-brand pl-5 p-2" href="Index.html">Hyprbots</a>
+    
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse p-2" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle mr-5" href="#" id="productsDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">Products</a>
+              <div class="dropdown-menu" aria-labelledby="productsDropdown">
+                <a class="dropdown-item" href="#sec1">Account Payable Hyper Assistant</a>
+                <a class="dropdown-item" href="#sec2">Account Receivable Hyper Assistant</a>
+                <a class="dropdown-item" href="#sec3">Claims Processing Hyper Assistant</a>
+                <a class="dropdown-item" href="#sec4">Recruitment Processing Hyper Assistant</a>
+                <a class="dropdown-item" href="#sec5">Contract and Legal Hyper Assistant</a>
+                <a class="dropdown-item" href="#sec6">General Purpose Office Hyper Assistant</a>
+                <a class="dropdown-item" href="#sec7">Cloud Capacity Monitoring and Control Hyper Assistant</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mr-5" href="#">Platform</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mr-5" href="Research.html">Research</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle mr-5" href="#" id="companyDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">Company</a>
+              <div class="dropdown-menu" aria-labelledby="companyDropdown">
+                <a class="dropdown-item" href="About.html">About Us</a>
+                <a class="dropdown-item" href="About.html">Mission</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+  <section class="section bg-light" id="sec1">
+    <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="container extra-Space unnine mt-5 pt-5 ml-5 pl-5 mobilez">
+              <h1 class="br-head"><span>Account Payable <br> Hyper Assistant</span></h1>
+              <p class="lead pt-4 pr-5 unnines firsst" style="z-index: 1; width: 50vw;">
+                AP Hyper Assistant makes account payable finance function fully autonomus. However it continues to remain in full control of human accountants. The tasks of invoice identification, classification, attachment extraction, reading and validating invoice information, information extraction, extracted information entry into general ledger (ERP system ) are transferred to this assitant with human accounts in the loop on need basis to review and approve.
+              </p>
+              <p class="mt-5">
+                <button class="btn"><img class="btn-svg" src="Images\Polygon 4.svg" alt=""> Demo</button>
+              </p>
+            </div>
+          </div>
+          <div class="roboo col-md-6 d-flex align-items-start justify-content-end pr-0 pt-5 mt-5">
+            <img class="roboo" src="Images\Roboo.png" alt="Company Image">
+          </div>
+        </div>
+    </div>
+  </section>
+
+  <section class="section blue-color text-white" id="sec2">
+    <div class="container-fluid">
+      <div class="row">
+          <div class="col-md-6">
+            <div class="container pt-5 ml-5 mt-5 pl-5 unnine mobilez">
+              <h1 class="bb-head" style="width: 80vw;"><span>Account Receivable <br> Hyper Assistant</span></h1>
+            </div>
+            <p class="mt-5 ml-5 pl-5 lead unnines mobilez" style="width: 55vw;">
+              AR Hyper Assistant makes account recievable finance function fully autonomus. However it continues to remain in full control of human accountants. The tasks of contract reading, invoice generation and validation, email despatch, customer follow-ups, payment acknowledgement, and read/write of invoice/payment information into general ledger (ERP and Payment Systems) are transferred to this assistant. Human accountants and sales representatives are in loop on need basis to review and approve.
+              </p>
+              <p class="mt-5 ml-5 pl-5 mobilez">
+                <button class="btn-1"><img class="btn-svg-1" src="Images\Polygon 4.svg" alt=""> Demo</button>
+              </p>
+          </div>
+          <div class="robo col-md-6 d-flex align-items-start justify-content-end pr-0 pt-5 mt-5">
+            <img class="robo" src="Images\RobooHand.png" alt="Company Image">
+          </div>
+        </div>
+    </div>
+  </section>
+
+  <section class="section bg-light" id="sec3">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="container pt-5 ml-5 mt-5 pl-5 unnine mobilez">
+            <h1 class="bb-head" style="width: 80vw;"><span>Claims Processing Hyper Assistant</span></h1>
+          </div>
+          <p class="mt-5 ml-5 pl-5 lead unnines mobilez" style="width: 55vw;">
+            CP Hyper Assistant makes employee claim processing function fully autonomus. However it continues to remain in full control of humans. The tasks of claim policy reading, rules formation, claims amount validation agaunst policy, information extractions from bills of proofs, validation of claimed amounts against proofs, write of claim information into general ledger (ERP and Payment Systems) and payment initiations are transferred to this assistant. Human accountants and line managers are in loop to review and approve.
+
+            </p>
+            <p class="mt-5 ml-5 pl-5 mobilez">
+              <button class="btn"><img class="btn-svg" src="Images\Polygon 4.svg" alt=""> Demo</button>
+            </p>
+        </div>
+        <div class="robo col-md-6 d-flex align-items-start justify-content-end pr-0 pt-5 mt-5">
+          <img class="robo3" src="Images\Eyecontact.png" alt="Company Image">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section blue-color text-white" id="sec4">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="container pt-5 ml-5 mt-5 pl-5 unnine mobilez">
+            <h1 class="bb-head" style="width: 80vw;"><span>Recruitment Processing Hyper Assistant</span></h1>
+          </div>
+          <p class="mt-5 ml-5 pl-5 lead unnines mobilez" style="width: 65vw;">
+              RP Hyper Assistant makes recruitment function autonomus. However it is controlled by humans in HR function. The tasks of creating and refining job description, searching and matching profiles, setting up interviews, communicating line managers and candidates and automating offer creation are transferre dto this assistant. Human resource staff and line managers are in loop to review and approve.
+            </p>
+            <p class="mt-5 ml-5 pl-5 mobilez">
+              <button class="btn-1"><img class="btn-svg-1" src="Images\Polygon 4.svg" alt=""> Demo</button>
+            </p>
+        </div>
+        <div class="robo col-md-6 d-flex align-items-start justify-content-end pr-0 pt-5 mt-5">
+          <img class="robo4" src="Images\Danger-Robo.png" alt="Company Image">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-light" id="sec5">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="container pt-5 ml-5 mt-5 pl-5 unnine mobilez">
+            <h1 class="bb-head" style="width: 80vw;"><span>Contract and Legal Hyper Assistant</span></h1>
+          </div>
+          <p class="mt-5 ml-5 pl-5 lead unnines mobilez" style="width: 55vw;">
+            CAL Hyper Assistant makes contract management function semi-autonomous. The tasks of creating and refining contracts, risk assessment, keeping track of renewals, keeping trcak of parity, updating the contract, collaborating with other hyper assistants from finance and HT functions, are transferred to this assistant. The legal staff and managers in contract function are in loop to review and approve.
+
+            </p>
+            <p class="mt-5 ml-5 pl-5 mobilez">
+              <button class="btn"><img class="btn-svg" src="Images\Polygon 4.svg" alt=""> Demo</button>
+            </p>
+        </div>
+        <div class="robo col-md-6 d-flex align-items-start justify-content-end pr-0 pt-5 mt-5">
+          <img class="robo5" src="Images\Thinking.png" alt="Company Image">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section blue-color text-white" id="sec6">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="container pt-5 ml-5 mt-5 pl-5 unnine mobilez">
+            <h1 class="bb-head" style="width: 80vw;"><span>General Purpose Office Hyper Assistant</span></h1>
+          </div>
+          <p class="mt-5 ml-5 pl-5 lead unnines mobilez" style="width: 65vw;">
+            GPO Hyper Assistant makes general office function semi-autonomous. The tasks of creating and drafting letters, reports, prepearing presentations, arranging meeting are assisted by this assistant. The office clerks review and approve the output.
+
+            </p>
+            <p class="mt-5 ml-5 pl-5 mobilez">
+              <button class="btn-1"><img class="btn-svg-1" src="Images\Polygon 4.svg" alt=""> Demo</button>
+            </p>
+        </div>
+        <div class="robo col-md-6 d-flex align-items-start justify-content-end pr-0 pt-5 mt-5">
+          <img class="robo6" src="Images\roboLap.png" alt="Company Image">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-light" id="sec7">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="container pt-5 ml-5 mt-5 pl-5 unninezz mobilez">
+            <h1 class="bb-head" style="width: 80vw;"><span>Cloud Capacity Monitoring and Control Hyper Assistant</span></h1>
+          </div>
+          <p class="mt-5 ml-5 pl-5 lead unnines mobilez" style="width: 65vw;">
+            CCMC Hyper Assistant makes cloud monitoring and cost control function autonomous. The tasks of understanding events and logs of applications, predicting and planning VM and storage loads, taking human approvals whereever needed, and managing GCC, AWS and Azures resources using respective management tools would be transferred to this assistant. Production and Devops human resources will control the assistant's actions.
+
+            </p>
+            <p class="mt-5 ml-5 pl-5 mobilez">
+              <button class="btn"><img class="btn-svg" src="Images\Polygon 4.svg" alt=""> Demo</button>
+            </p>
+        </div>
+        <div class="robo col-md-6 d-flex align-items-start justify-content-end pr-0 pt-5 mt-5">
+          <img class="robo7" src="Images\halfrobi.png" alt="Company Image">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bot-foot container-fluid text-center">
+    <br><br>
+    <div class="row">
+      <div class="col">
+        <h1 class="bf-name">HYPRBOTS</h1>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col foot-headers">
+        <a href="#" class="mr-5 footer-link">Products</a>
+        <a href="#"class="mr-5 footer-link"">Platform</a>
+        <a href="#"class="mr-5 footer-link"">Research</a>
+        <a href="#" class="footer-link">Company</a>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col">
+        <a href="#" class="mr-4 foot-icon"><i class="fab fa-facebook"></i></a>
+        <a href="#" class="mr-4 foot-icon"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="mr-4 foot-icon"><i class="fab fa-instagram"></i></a>
+      </div>
+      <br><br>
+    </div>
+    <div class="row">
+      <div class="col">
+        <p class="rightsCopy">&copy; 2023 All rights reserved | This template is made with ❤️ by Knownfreaks</p>
+      </div>
+    </div>
+    <br>
+  </footer>
+
+  <!-- Repeat the above section structure for the remaining sections -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <script>
+    // NAVBAR
+    window.addEventListener('DOMContentLoaded', () => {
+      const navbarBrand = document.querySelector('.navbar-brand');
+      const mq = window.matchMedia('(max-width: 992px)');
+  
+      function handleScreenResize(event) {
+        if (event.matches) {
+          navbarBrand.classList.remove('pl-5');
+        } else {
+          navbarBrand.classList.add('pl-5');
+        }
+      }
+  
+      mq.addEventListener('change', handleScreenResize);
+      handleScreenResize(mq);
+    });
+
+
+        // Get the footer links
+        const footerLinks = document.querySelectorAll('.footer-link');
+
+        // Function to add or remove class based on screen width
+        function toggleMarginClass() {
+        if (window.innerWidth < 477) {
+            footerLinks.forEach(link => {
+            link.classList.remove('mr-5');
+            link.classList.add('mr-3');
+            });
+        } else {
+            footerLinks.forEach(link => {
+            link.classList.remove('mr-3');
+            link.classList.add('mr-5');
+            });
+        }
+        }
+
+        // Call the function on page load and whenever the window is resized
+        window.addEventListener('load', toggleMarginClass);
+        window.addEventListener('resize', toggleMarginClass);
+
+        // Removing ml-5
+        function removeMarginLeft() {
+    var elements = document.getElementsByClassName('mobilez');
+    for (var i = 0; i < elements.length; i++) {
+      elements[i].classList.remove('ml-5');
+    }
+  }
+
+  function addMarginLeft() {
+    var elements = document.getElementsByClassName('mobilez');
+    for (var i = 0; i < elements.length; i++) {
+      elements[i].classList.add('ml-5');
+    }
+  }
+
+  function handleResize() {
+    if (window.innerWidth < 768) {
+      removeMarginLeft();
+    } else {
+      addMarginLeft();
+    }
+  }
+
+  window.addEventListener('resize', handleResize);
+  handleResize();
+
+  </script>
+</body>
+</html>
